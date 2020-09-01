@@ -1,0 +1,30 @@
+    "watch": "tsc -p tsconfig.json --watch"
+
+
+					{
+						"$schema": "http://json-schema.org/schema",
+						"id": "CreateProjectSchematic",
+						"title": "create project options schema",
+						"type": "object",
+						"description": "Initialise a new project",
+						"properties": {
+						}
+					 }
+
+
+						 "$default": {
+							 "$source": "argv",
+							 "index": 0
+						 }
+
+Damyan & Viktor
+
+
+					return externalSchematic('@schematics/angular', 'ng-new', {
+						name,
+						version: '9.0.0',
+						routing: !!routing,
+						style: 'scss',
+					})
+
+
